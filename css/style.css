@@ -50,7 +50,7 @@ label {
 
 /* FONT_STYLE */
 @font-face {
-  font-family: 'Source Code Pro';
+  font-family: 'Courier New';
   font-style: normal;
   font-weight: 400;
   src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(http://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasDy2Q8seG17bfDXYR_jUsrzg.woff2) format('woff2');
@@ -58,7 +58,7 @@ label {
 }
 
 @font-face {
-  font-family: 'Source Code Pro';
+  font-family: 'Courier New';
   font-style: normal;
   font-weight: 400;
   src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(http://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format('woff2');
@@ -66,7 +66,7 @@ label {
 }
 
 @font-face {
-  font-family: 'Source Code Pro';
+  font-family: 'Courier New';
   font-style: normal;
   font-weight: 600;
   src: local('Source Code Pro Semibold'), local('SourceCodePro-Semibold'), url(http://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqVKFh1TDTPrUZWzVp6FtpG8.woff2) format('woff2');
@@ -74,7 +74,7 @@ label {
 }
 
 @font-face {
-  font-family: 'Source Code Pro';
+  font-family: 'Courier New';
   font-style: normal;
   font-weight: 600;
   src: local('Source Code Pro Semibold'), local('SourceCodePro-Semibold'), url(http://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSOFnW3Jk0f09zW_Yln67Ac.woff2) format('woff2');
