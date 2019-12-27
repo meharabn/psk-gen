@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    window.console = window.console || function(t) {};
+    window.open = function(){ console.log('window.open is disabled.'); };
+    window.print = function(){ console.log('window.print is disabled.'); };
+    // Support hover state for mobile.
+    if (false) {
+      window.ontouchstart = function(){};
+    }
+  </script>
+
+    <script src="js/function.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+  <img src="images/key.png" style="height:105px;width:345px;">
+  <div class="row">
+    <div class="eight columns">
+      <p><label for="">Length:</label> <input style="width:345px;" id="length" type="number" value="12"/> <br/>
+        <label for="">Characters:</label>
+        <input type="text" value='12345677890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()-=_+[]{};:"\|,<.>/?' id="charset" />
+        <button style="width:345px;background-color:" id="generate">Generate Password</button>
+		<span style="color:white;">______________________</span>By<span style="color:white;">_</span><a style="text-decoration:none;" href="https://mhnabil.ml">Meherab<span style="color:white;">_</span>Nabil</a>
+      </p>
+    </div>
+	<div class="four columns">
+    <h5>See Results</h5>
+    </div>
+	
+    <div style="color:black;" class="four columns" id="passwords">
+    
+    </div>
+	
+  </div>
+</div>
+
+
+  <script src='js/jquery.js'></script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage('resize', "*");
+    }
+  </script>
+
+  <script src="js/timeout.js"></script>
+  <script>
+    $('#generate').click(function () {
+    var charset = $('#charset').val();
+    var password = '';
+    var password_length = parseInt($('#length').val());
+    for (var i = 0; i < password_length; i++) {
+        if (window.CP.shouldStopExecution(1)) {
+            break;
+        }
+        var random_position = Math.floor(Math.random() * charset.length);
+        password += charset[random_position];
+    }
+    window.CP.exitedLoop(1);
+    if (password.length == password_length) {
+        password = password.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        $('#passwords').prepend(password + '<br/>' + '<hr />');
+    } else {
+        console.log(password.length, password_length, password);
+    }
+});
+  </script>
+
+</body>
+
+</html>
